@@ -2,15 +2,24 @@ import { FaTimes } from 'react-icons/fa';
 import { useAppContext } from './AppContextProvider';
 import sublinks from './data';
 import { LazyMotion, domAnimation, m, AnimatePresence } from 'framer-motion';
+import React from 'react';
 
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useAppContext();
 
+  function handleOutsideSidebarClick(e: React.MouseEvent<HTMLElement>): void {
+    const targetEle = e.target as HTMLElement;
+
+    if (targetEle.classList.contains('sidebar-wrapper')) {
+      closeSidebar();
+    }
+  }
   return (
     <div
       className={`${
         isSidebarOpen ? 'sidebar-wrapper show' : 'sidebar-wrapper'
       }`}
+      onClick={handleOutsideSidebarClick}
     >
       <LazyMotion features={domAnimation}>
         <AnimatePresence>
