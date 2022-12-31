@@ -6,7 +6,7 @@ Submenu Shows up for non-mobile screen when hovered on particular links, and sub
 
 DEMO ▶
 
-https://user-images.githubusercontent.com/113245457/210140404-14afbad9-7ee6-42ae-b29d-180b755bf210.mp4
+https://user-images.githubusercontent.com/113245457/210147795-016d3d0e-fbe2-4da0-9fe1-c25c2b008433.mp4
 
 
 ## Features:
